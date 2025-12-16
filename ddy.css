@@ -541,6 +541,15 @@ footer i {
     transform: scale(1.05);
     
 }
+@media (max-width:320px) {
+    .btn{
+        margin-left: -10px;
+    }
+    .bounce{
+        width: 2px;
+    }
+}
+    
 /* ========================== SMALL PHONES (Samsung Galaxy S8) ========================== */
 @media (max-width: 380px) {
 
@@ -600,10 +609,11 @@ footer i {
     }
 
     .img {
-        width: 100%;
+        width: 80%;
         height: 200px;   /* fixed height for uniformity */
         object-fit: cover; /* prevents stretching */
         border-radius: 20px;
+        margin-left: -2090px;
     }
 
     /* Buy now button inside box */
@@ -670,5 +680,139 @@ footer i {
 
     .bounce {
         width: 180px;
+    }
+}
+/* ========================== UNIVERSAL MOBILE FIX (ALL PHONES) ========================== */
+@media (max-width: 480px) {
+
+    /* Prevent horizontal scrolling on all phones */
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* General container safety */
+    main, section, div {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Header fix */
+    .head {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .a {
+        font-size: 15px;
+    }
+
+    /* Stack hero content */
+    .init {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ok,
+    .video {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .anchor {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .opo {
+        font-size: 14px;
+    }
+
+    /* Product rows stack vertically */
+    .row1,
+    .row2,
+    .row3,
+    .row40 {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    /* All product boxes unified */
+    .box1,
+    .box2,
+    .box3,
+    .box12,
+    .box22,
+    .box32,
+    .box13,
+    .box23,
+    .box33 {
+        width: 92%;
+        max-width: 320px;
+        height: auto;
+        padding-bottom: 65px;
+        position: relative;
+    }
+
+    /* Image fix (CRITICAL) */
+    .img {
+        width: 85%;
+        height: 200px;
+        object-fit: cover;
+        margin: 0 auto;
+        display: block;
+        border-radius: 20px;
+    }
+
+    /* Neutralize dangerous negative margins */
+    img,
+    .img,
+    .bounce {
+        margin-left: 0 !important;
+    }
+
+    /* Buy Now button stays inside card */
+    .bnt {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        font-size: 14px;
+        height: 36px;
+    }
+
+    /* Bounce image scaling */
+    .bounce {
+        width: 140px;
+        height: auto;
+    }
+
+    .shadow {
+        width: 110px;
+        margin-left: 0;
+    }
+
+    /* Footer stacks cleanly */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer1,
+    .footer2,
+    .logotic {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    del,
+    .rowp,
+    .word1 {
+        margin-left: 0;
+        text-align: center;
     }
 }
